@@ -10,12 +10,11 @@ finalizzata al monitoraggio di soggetti da parte di due categorie di utenti:
 ### Materiali 
 Per la realizzazione hardware del dispositivo è stata utilizzata una board Arduino Uno R4 Wi-Fi, alimentata da una batteria a 9V, e due sensori:  
 - ProtoCentral Pulse Express (MAX32664), per l’acquisizione della pressione sistolica e diastolica, frequenza cardiaca e saturazione dell’ossigeno (a sinistra in figura)
-- A9G Low-Power GSM/GPRS+GPS Module, per l’acquisizione della coordinate GPS. (a destra in figura)
-![](immagini/MAX.png)
-![](immagini/A9g.png)  
+- A9G Low-Power GSM/GPRS+GPS Module, per l’acquisizione della coordinate GPS. (a destra in figura)  
+<img src="Immagini/MAX.png" alt="" width="100">                      <img src="Immagini/A9G.jpeg" alt="" width="100">
 ### Metodi 
-L’architettura di base per il funzionamento di tale progetto `e la seguente:   
-![](immagini/Architettura.png)  
+L’architettura di base per il funzionamento di tale progetto `e la seguente:  
+<img src="Immagini/Archiettura" alt="" width="300">
 
 - Comunicazione Arduino-BLE periferico: per mezzo della libreria <ArduinoBLE.h> è stata realizzata la comunicazione BLE con l’obiettivo di comunicare i fallimenti delle operazioni chiave per il corretto funzionamento del dispositivo.
 - Comunicazione Arduino-MQTT broker: per mezzo della libreria <PubSubClient.h> è stato effettuato il publish dei topic /sys, /dia, /hr e /spo2 sul server pubblico Mosquitto, che funge da MQTT broker.
@@ -23,9 +22,9 @@ L’architettura di base per il funzionamento di tale progetto `e la seguente:
 - Comunicazione MQTT broker-utente finale: è stata realizzata un’app con AndroidStudio che permette a diversi subscriber di ricevere topic differenti e visualizzarli di conseguenza in base al ruolo scelto. La gestione degli utenti è realizzata tramite il database Google Firebase.
 ## Risultati
 La visualizzazione dei dati in tempo reale nei tre end point, rispettivamente Ubidots, caregiver e medico, è la seguente:
-![](immagini/Ubidots.png)  
-![](immagini/CaregiverNot.png)  
-![](immagini/CaregiverNoNot.png)  
+![](Immagini/Ubidots.png)  
+<img src="Immagini/CaregiverNot.png" alt="" width="200">  <img src="Immagini/Doctor.png" alt="" width="200">
+
 ## Limitazioni e prospettive future
 ### Limitazioni
 Il progetto presenta le seguenti limitazioni:  
