@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background1"
+    tools:context=".SignupActivity">
+
+    <!-- EditText for email -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+    <!-- EditText for name -->
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginTop="16dp"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+    <!-- EditText for surname -->
+    <EditText
+        android:id="@+id/edtSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtName"
+        android:layout_marginTop="16dp"
+        android:hint="@string/surname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+    <!-- EditText for phone number -->
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSurname"
+        android:layout_marginTop="16dp"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+    <!-- EditText for address -->
+    <EditText
+        android:id="@+id/edtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPhoneNumber"
+        android:layout_marginTop="16dp"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+    <!-- EditText for password -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtAddress"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_button_white"
+        android:paddingStart="8dp"
+        />
+
+
+    <!-- RadioGroup for role selection -->
+    <RadioGroup
+        android:id="@+id/radioGroupRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonCaregiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caregiver"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor" />
+    </RadioGroup>
+
+    <!-- SignUp Button -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupRole"
+        android:layout_marginTop="30dp"
+        android:text="@string/signup_"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button_background"  />
+
+    <!-- Back to Login Button -->
+    <Button
+        android:id="@+id/btnBackToLogin"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignUp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/back_to_login"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button_background"  />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="emailEditText" type="id" />
+    <item name="passwordEditText" type="id" />
+    <item name="loginButton" type="id" />
+    <item name="signUpButton" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="text" type="id" />
+    <item name="nav_graph" type="id"/>
+
+</resources>
